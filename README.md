@@ -1,2 +1,2 @@
 # fullstack-web3-with-js
-https://www.youtube.com/watch?v=gyMwXuJrbJQ
+Learning web3 development from [here](https://www.youtube.com/watch?v=gyMwXuJrbJQ).
