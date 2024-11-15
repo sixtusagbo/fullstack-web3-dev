@@ -15,9 +15,14 @@ contract FundMe {
         require(msg.value >= minimumUsd, "Didn't send enough"); // 1e18 = 1 * 10^18 // in wei
     }
 
-    function getPrice() public {
+    function getPrice() public view returns (uint256) {
         // ABI
         // Address 0x694AA1769357215DE4FAC081bf1f309aDC325306
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
+        (,int256 price,,,) = priceFeed.latestRoundData();
+        // Price of ETH in terms of USD
+        // 3000.00000000
+        return uint256(price * 1e10); // 1^10 
     }
 
     function getVersion() public view returns (uint256) {
