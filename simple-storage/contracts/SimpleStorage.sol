@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.8; // Hello World
+pragma solidity ^0.8.24; // Hello World
 
 contract SimpleStorage {
     // This gets initialised to zero!
