@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.8; // Hello World
+pragma solidity ^0.8.18; // Hello World
 
 contract SimpleStorage {
     // This gets initialised to zero!
@@ -15,7 +15,7 @@ contract SimpleStorage {
     // uint256[] public favoriteNumbersList;
     People[] public people;
  
-    function store(uint256 _favoriteNumber) public {
+    function store(uint256 _favoriteNumber) public virtual {
         favoriteNumber = _favoriteNumber;
     }
 
@@ -29,3 +29,5 @@ contract SimpleStorage {
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
+
+// 0xd9145CCE52D386f254917e481eB44e9943F39138
