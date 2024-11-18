@@ -1,3 +1,4 @@
 # Solidity 101
 
-Learning smart contract development w/ solidity from [Cyfrin Updraft](https://updraft.cyfrin.io).
+Learning smart contract development with solidity.
+Thank you @PatrickAlphaC and @Cyfrin
