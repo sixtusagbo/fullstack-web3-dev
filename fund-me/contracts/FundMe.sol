@@ -3,9 +3,9 @@
 // Set a minimum funding value in USD
 
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.8;
+pragma solidity ^0.8.18;
 
-import "./PriceConverter.sol";
+import {PriceConverter} from "./PriceConverter.sol";
 
 error NotOwner();
 
@@ -58,6 +58,18 @@ contract FundMe {
         if (msg.sender != i_owner) { revert NotOwner(); }
         _;
     }
+
+    // Explainer from: https://solidity-by-example.org/fallback/
+    // Ether is sent to contract
+    //      is msg.data empty?
+    //          /   \
+    //         yes  no
+    //         /     \
+    //    receive()?  fallback()
+    //     /   \
+    //   yes   no
+    //  /        \
+    //receive()  fallback()
 
     receive() external payable {
         fund();
